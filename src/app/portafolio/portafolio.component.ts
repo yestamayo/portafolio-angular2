@@ -9,9 +9,9 @@ import { Router } from '@angular/router';
 export class PortafolioComponent implements OnInit {
 
   proyectos = [
-    {id: 1, nombre: 'Sitio Web Centro Comercial Oviedo', url: 'oviedo.com.co'},
-    {id: 2, nombre: 'Sitio Web Pizzería Olivia', url: 'pizzeriaolivia.co'},
-    {id: 3, nombre: 'Sitio Web Proplas', url: 'proplas.com.co'},
+    {id: 1, nombre: 'Sitio Web Centro Comercial Oviedo', url: 'oviedo.com.co', img: '../../../assets/imagenes/oviedo.com.co.PNG'},
+    {id: 2, nombre: 'Sitio Web Pizzería Olivia', url: 'pizzeriaolivia.co', img: './assets/imagenes/pizzeriaolivia.co.PNG'},
+    {id: 3, nombre: 'Sitio Web Proplas', url: 'proplas.com.co', img: './assets/imagenes/proplas.com.co.PNG'},
   ];
 
   constructor(private router: Router) { }
