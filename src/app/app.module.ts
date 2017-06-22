@@ -5,21 +5,21 @@ import { HttpModule } from '@angular/http';
 import { routes } from './app.router';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
-import { ServicesComponent } from './services/services.component';
 import { PortafolioComponent } from './portafolio/portafolio.component';
 import { PortafolioDetalleComponent } from './portafolio-detalle/portafolio-detalle.component';
 import { EducacionComponent } from './educacion/educacion.component';
 import { ContactoComponent } from './contacto/contacto.component';
+import { ExperienciaComponent } from './experiencia/experiencia.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AboutComponent,
-    ServicesComponent,
     PortafolioComponent,
     PortafolioDetalleComponent,
     EducacionComponent,
-    ContactoComponent
+    ContactoComponent,
+    ExperienciaComponent
   ],
   imports: [
     BrowserModule,

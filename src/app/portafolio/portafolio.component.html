@@ -1,14 +1,20 @@
-<h1>Portafolio</h1>
-<ul>
-  <li class="proyecto col-xs-12 col-sm-6" (click)="onSelect(proyecto)" *ngFor="let proyecto of proyectos">
-    <div class="panel panel-info">
-      <div class="panel-heading">
-        <h3 class="panel-title">{{proyecto.nombre}}</h3>
-      </div>
-      <div class="panel-body">
-        <a href={{proyecto.url}} target="_blank"><img src={{proyecto.img}} class="img-responsive" /></a>
-        Url: {{proyecto.url}}
-      </div>
+<section id="portafolio">
+  <div class="row">
+    <div class="col-lg-12 text-center">
+      <h2>Portafolio</h2>
+      <hr class="star-primary">
     </div>
-  </li>
-</ul>
+  </div>
+  <ul>
+    <li class="proyecto col-xs-12 col-sm-6" (click)="onSelect(proyecto)" *ngFor="let proyecto of proyectos">
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h3 class="panel-title">{{proyecto.nombre}}</h3>
+        </div>
+        <div class="panel-body">
+          <a href={{proyecto.url}} target="_blank"><img src={{proyecto.img}} class="img-responsive" /></a> Url: {{proyecto.url}}
+        </div>
+      </div>
+    </li>
+  </ul>
+</section>

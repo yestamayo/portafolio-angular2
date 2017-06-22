@@ -1,13 +1,35 @@
-<p>
-  Un Desarrollador Web Frontend, es el que se encarga de la parte que el navegador despliega, esto implica en términos generales utilizar HTML, CSS y javaScript. Y aunque parte de sus responsabilidades es que la página se vea de cierta manera, su trabajo no es de diseñador, si no de traductor del diseño a las tecnologías antes mencionadas, y del consumo de datos (o despliegue) que vienen de la parte del servidor.
-</p>
-<h2>Habilidades</h2>
-<ul>
-  <li class="habilidad" *ngFor="let habilidad of habilidades">
-    <h3>{{habilidad.nombre}}</h3>
-    <div class="progress">
-      <div class="progress-bar progress-bar-info" style="width:20%"></div>
+<section id="about">
+  <div class="row">
+    <div class="col-lg-12 text-center">
+      <h2>About</h2>
+      <hr class="star-primary">
     </div>
-    
-  </li>
-</ul>
+  </div>
+  <p class="text-justify">
+    Un Desarrollador Web Frontend, es el que se encarga de la parte que el navegador despliega, esto implica en términos generales
+    utilizar HTML, CSS y javaScript. Y aunque parte de sus responsabilidades es que la página se vea de cierta manera, su
+    trabajo no es de diseñador, si no de traductor del diseño a las tecnologías antes mencionadas, y del consumo de datos
+    (o despliegue) que vienen de la parte del servidor.
+  </p>
+  <h3>Habilidades</h3>
+  <ul>
+    <li class="habilidad" *ngFor="let habilidad of habilidades">
+      <h4>{{habilidad.nombre}}</h4>
+      <div *ngIf="habilidad.porcentaje > 70;">
+        <div class="progress">
+          <div [ngClass]="['progress-bar-success', 'progress-bar']" [ngStyle]="{ 'width': habilidad.porcentaje + '%' }"></div>
+        </div>
+      </div>
+      <div *ngIf="habilidad.porcentaje <= 50">
+        <div class="progress">
+          <div [ngClass]="['progress-bar-warning', 'progress-bar']" [ngStyle]="{ 'width': habilidad.porcentaje + '%' }"></div>
+        </div>
+      </div>
+       <div *ngIf="habilidad.porcentaje == 60">
+         <div class="progress">
+          <div [ngClass]="['progress-bar-info', 'progress-bar']" [ngStyle]="{ 'width': habilidad.porcentaje + '%' }"></div>
+        </div>
+       </div>
+    </li>
+  </ul>
+</section>
