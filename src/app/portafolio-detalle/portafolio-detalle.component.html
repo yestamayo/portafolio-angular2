@@ -1,3 +1,6 @@
-<h3>Proyecto seleccionado id = {{proyectoId}}</h3>
+<h2>{{proyectoActual.nombre}}</h2>
+<img src={{proyectoActual.img}} class="img-responsive" />
+<a href="{{proyectoActual.url}}" target="_blank">{{proyectoActual.url}}</a><br>
+<p>id: {{proyectoId}}</p>
 <a (click)="goPrevious()">anterior</a>
 <a (click)="goNext()">siguiente</a>

@@ -18,7 +18,7 @@ export class AboutComponent implements OnInit {
 
   //public currentPercentage = '90';
 
-  constructor() { }
+  constructor(){}
 
   ngOnInit() {
   }

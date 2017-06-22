@@ -1,16 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, Params } from '@angular/router';
+import { PortafolioService } from './../portafolio.service';
 
 @Component({
   //selector: 'app-portafolio-detalle',
   templateUrl: './portafolio-detalle.component.html',
-  styleUrls: ['./portafolio-detalle.component.css']
+  styleUrls: ['./portafolio-detalle.component.css'],
+  providers: [PortafolioService]
 })
 export class PortafolioDetalleComponent implements OnInit {
 
   public proyectoId;
+  public proyectos = [];
+  public proyectoActual;
 
-  constructor(private route: ActivatedRoute, private router: Router) { }
+  constructor(private route: ActivatedRoute, private router: Router, private _portafolioService: PortafolioService) { }
 
   /*ngOnInit() {
     let id = this.route.snapshot.params['id'];
@@ -18,9 +22,11 @@ export class PortafolioDetalleComponent implements OnInit {
   }*/
 
   ngOnInit(){
-    this.route.params.subscribe((params: Params) => {
+      this.route.params.subscribe((params: Params) => {
       let id = parseInt(params['id']);
       this.proyectoId = id;
+      this.proyectos = this._portafolioService.getPortafolio();
+      this.proyectoActual = this.proyectos.find(x => x.id === this.proyectoId);
     })
   }
 
