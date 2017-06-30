@@ -19,3 +19,6 @@ hr.star-light, hr.star-primary {
     max-width: 450px;
     margin: 25px auto 30px;
 }
+.panel-info {
+    min-height: 350px;
+}
